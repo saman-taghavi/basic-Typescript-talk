@@ -20,34 +20,52 @@ drawings:
 
 # Basic Typescript
 
-<div class="text-white  font-black">
+<div class="text-white rounded-md  font-black">
   <span @click="$slidev.nav.next" class="bg-blue-500   rounded cursor-pointer p-3" hover="bg-black bg-opacity-10 text-blue-500">
   hands on experince on basic typescript features
   </span>
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Ask audience about their prior knowledge
 -->
 
 ---
 
-# What is Slidev?
+<h1 class="font-bold text-blue-500 text-xl">
+ What is Typescript?
+</h1>
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+TypeScript is JavaScript with syntax for types.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- 🐞 **Erros** - some of them can be noticed before deployment
+- 🎨 **Tools** - most Editors support it and have tools for it
+- 🧑‍💻 **Developer Friendly** - if You know it well enough otherwise use any
+  ```ts {monaco}
+  let s: any = "I don't care enough";
+  ```
+- 🤹 **type inference** - Typescript understands JS, it can infer when possible
+- 🎥 **Progressive** - we can add it, incrementally and opt-in
+
+```ts {monaco} 
+// @ts-check
+function oh(array) {
+  if (orray.length > 0) {
+    return array;
+  }
+}
+```
+
+<!-- - 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
+- 🛠 **Hackable** - anything possible on a webpage -->
 
 <br>
 <br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<span class="bg-white bg-opacity-20 p-5 absolute rounded-md " hover="bg-opacity-70 text-black">
+Read more about <a class="text-blue-500"  href='https://www.typescriptlang.org/docs/handbook/intro.html' target=”_blank”>
+Typescript
+</a>
+</span>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
