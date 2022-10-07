@@ -16,6 +16,7 @@ info: |
 # persist drawings in exports and build
 drawings:
   persist: false
+monaco: true
 ---
 
 # Basic Typescript
@@ -38,16 +39,16 @@ Ask audience about their prior knowledge
 
 TypeScript is JavaScript with syntax for types.
 
-- 🐞 **Erros** - some of them can be noticed before deployment
+- 🐞 **Errors** - some of them can be noticed before deployment
 - 🎨 **Tools** - most Editors support it and have tools for it
-- 🧑‍💻 **Developer Friendly** - if You know it well enough otherwise use any
+- 🧑‍💻 **Developer Experience** - if You know it well enough otherwise use any
   ```ts {monaco}
   let s: any = "I don't care enough";
   ```
-- 🤹 **type inference** - Typescript understands JS, it can infer when possible
+- 🤹 **Inference** - Typescript understands JS, it can infer when possible
 - 🎥 **Progressive** - we can add it, incrementally and opt-in
 
-```ts {monaco} 
+```ts {1|2,3|all}
 // @ts-check
 function oh(array) {
   if (orray.length > 0) {
@@ -56,25 +57,21 @@ function oh(array) {
 }
 ```
 
-<!-- - 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage -->
+
 
 <br>
 <br>
-<span class="bg-white bg-opacity-20 p-5 absolute rounded-md " hover="bg-opacity-70 text-black">
+<span class="bg-white bg-opacity-20 right-5 p-5 absolute rounded-md " hover="bg-opacity-70 text-black">
 Read more about <a class="text-blue-500"  href='https://www.typescriptlang.org/docs/handbook/intro.html' target=”_blank”>
 Typescript
 </a>
 </span>
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+
 
 <style>
 h1 {
-  background-color: #2B90B6;
+  background-color: blue;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
   -webkit-background-clip: text;
