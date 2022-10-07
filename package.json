@@ -1,5 +1,6 @@
 {
   "name": "basic-typescript",
+  "description": "a short intro to Typescript's basics",
   "private": true,
   "scripts": {
     "build": "slidev build",
