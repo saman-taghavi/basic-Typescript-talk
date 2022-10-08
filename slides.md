@@ -143,10 +143,38 @@ let ENUM_COLOR: ColorEnum = "blue"; // ! and use it
 ```
 
 
-
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+layout: default
+---
+
+# Types and Interfaces
+
+<br>
+<br>
+<br>
+
+```ts {1|3|3-4|3-9|11-16}
+type BasicColor = string;
+
+interface ColorInterface { 
+  // ! interface is mostly used for objects
+  red: BasicColor;
+  green: BasicColor;
+  blue: number;
+  colorGenerator: (colorName:string)=>string
+}
+
+type ColorByType = {
+  red: BasicColor;
+  green: string;
+  blue: number;
+  colorGenerator: (colorName:string)=>string
+};
+
+```
+
+
+
 ---
 
 # Typing Functions
