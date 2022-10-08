@@ -12,5 +12,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "monaco-themes": "^0.4.2"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.27.0"
   }
 }
