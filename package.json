@@ -3,7 +3,7 @@
   "description": "a short intro to Typescript's basics",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build ",
     "dev": "slidev --open",
     "export": "slidev export"
   },

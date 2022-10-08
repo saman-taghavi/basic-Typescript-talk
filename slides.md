@@ -17,6 +17,7 @@ info: |
 drawings:
   persist: false
 monaco: true
+download: 'https://raw.githubusercontent.com/saman-taghavi/basic-Typescript-talk/master/slides-export.pdf'
 ---
 
 # Basic Typescript
