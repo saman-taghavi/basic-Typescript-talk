@@ -27,7 +27,7 @@ monaco: true
   </span>
 </div>
 
-<div class="absolute ">
+<div class="absolute right-5 flex items-center flex-col justify-center">
 <img src="https://avatars.githubusercontent.com/u/66922536" class="max-w-36  rounded-full mx-auto ">
 <p>
 Saman Taghavi
@@ -55,7 +55,7 @@ TypeScript is JavaScript with syntax for types.
 - 🤹 **Inference** - Typescript understands JS, it can infer when possible
 - 🎥 **Progressive** - we can add it, incrementally and opt-in
 
-```ts {1|2,3|all}
+```ts {all|1|2,3|all}
 // @ts-check
 function oh(array) {
   if (orray.length > 0) {
@@ -137,9 +137,9 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 <br>
 
 ```ts 
-type ColorEnum = "red" | "blue" | "green"; // ! one of the ways we can define a type
+type ColorEnum = "red" | "blue" | "green"; 
 
-let ENUM_COLOR: ColorEnum = "blue"; // ! and use it
+let ENUM_COLOR: ColorEnum = "blue"; 
 ```
 
 
