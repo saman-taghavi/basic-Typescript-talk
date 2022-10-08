@@ -49,7 +49,7 @@ TypeScript is JavaScript with syntax for types.
 - 🐞 **Errors** - some of them can be noticed before deployment
 - 🎨 **Tools** - most Editors support it and have tools for it
 - 🧑‍💻 **Developer Experience** - if You know it well enough otherwise use any
-  ```ts {monaco}
+  ```ts 
   let s: any = "I don't care enough";
   ```
 - 🤹 **Inference** - Typescript understands JS, it can infer when possible
@@ -84,29 +84,37 @@ h1 {
 }
 </style>
 
+
 ---
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# Basic Types
 
-Use code snippets and get the highlighting directly![^1]
+see if you can solve this [simple problem](https://github.com/total-typescript/beginners-typescript-tutorial/blob/main/src/01-number.problem.ts#L11) from 
+<br>
+<br>
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: string;
-}
+```ts {1-2|4-6|8-10|12-14} 
+// * 1. Boolean
+var isDone = false;
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id);
-  const newUser = { ...user, ...update };
-  saveUser(id, newUser);
-}
+// * 2. Number
+var hex = 0xf00d;
+var binary = 10;
+
+// * 3. String
+var color = "blue";
+color = "red";
+
+// * 4. Array
+var list = [1, 2, 3];
+var list2 = ["test", "not a test", "array of strings"];
+
 ```
+
+later on we will try to solve more problems from [this repo](https://github.com/total-typescript/beginners-typescript-tutorial), shout out and thanks to [**@mattpocockuk**](https://twitter.com/mattpocockuk)
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
