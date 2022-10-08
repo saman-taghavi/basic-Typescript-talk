@@ -5,75 +5,76 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
 # apply any windi css classes to the current slide
-class: 'text-center'
+class: "text-center"
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: true
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Basic Typescipt
 # persist drawings in exports and build
 drawings:
   persist: false
-# use UnoCSS
-css: unocss
+monaco: true
 ---
 
-# Welcome to Slidev
+# Basic Typescript
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+<div class="text-white rounded-md  font-black">
+  <span @click="$slidev.nav.next" class="bg-blue-500   rounded cursor-pointer p-3" hover="bg-black bg-opacity-10 text-blue-500">
+  hands on experince on basic typescript features
   </span>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
+<div class="absolute right-5 flex items-center flex-col justify-center">
+<img src="https://avatars.githubusercontent.com/u/66922536" class="max-w-36  rounded-full mx-auto ">
+<p>
+Saman Taghavi
+</p>
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Ask audience about their prior knowledge
 -->
 
 ---
 
-# What is Slidev?
+<h1 class="font-bold text-blue-500 text-xl">
+ What is Typescript?
+</h1>
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+TypeScript is JavaScript with syntax for types.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- 🐞 **Errors** - some of them can be noticed before deployment
+- 🎨 **Tools** - most Editors support it and have tools for it
+- 🧑‍💻 **Developer Experience** - if You know it well enough otherwise use any
+  ```ts 
+  let s: any = "I don't care enough";
+  ```
+- 🤹 **Inference** - Typescript understands JS, it can infer when possible
+- 🎥 **Progressive** - we can add it, incrementally and opt-in
+
+```ts {all|1|2,3|all}
+// @ts-check
+function oh(array) {
+  if (orray.length > 0) {
+    return array;
+  }
+}
+```
 
 <br>
 <br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+<span class="bg-white bg-opacity-20 right-5 p-5 absolute rounded-md " hover="bg-opacity-70 text-black">
+Read more about <a class="text-blue-500"  href='https://www.typescriptlang.org/docs/handbook/intro.html' target=”_blank”>
+Typescript
+</a>
+</span>
 
 <style>
 h1 {
-  background-color: #2B90B6;
+  background-color: blue;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
   -webkit-background-clip: text;
@@ -83,303 +84,130 @@ h1 {
 }
 </style>
 
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# Basic Types
 
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
+see if you can solve this [simple problem](https://github.com/total-typescript/beginners-typescript-tutorial/blob/main/src/01-number.problem.ts#L11) from 
+<br>
 <br>
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+```ts {1-2|4-6|8-10|12-14|16-19|21-23|all} {maxHeight: '250px'}
+// * 1. Boolean
+var isDone = false;
 
-Block
-$$
-\begin{array}{c}
+// * 2. Number
+var hex = 0xf00d;
+var binary = 10;
 
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+// * 3. String
+var color = "blue";
+color = "red";
 
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+// * 4. Array
+var list = [1, 2, 3];
+var list2 = ["test", "not a test", "array of strings"];
 
-\nabla \cdot \vec{\mathbf{B}} & = 0
+// * 7. Any
+var notSure: any = 4; // ? any type is given explicitly
+notSure = "maybe a string instead";
+notSure = false;
 
-\end{array}
-$$
+// * 9. Null and Undefined
+let u = undefined;
+let n = null;
+```
+
+later on we will try to solve more problems from [this repo](https://github.com/total-typescript/beginners-typescript-tutorial), shout out and thanks to [**@mattpocockuk**](https://twitter.com/mattpocockuk)
+
+
+---
+layout: image-left
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# ENUMS
 
 <br>
+<br>
+<br>
 
-[Learn more](https://sli.dev/guide/syntax#latex)
+```ts 
+type ColorEnum = "red" | "blue" | "green"; 
 
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+let ENUM_COLOR: ColorEnum = "blue"; 
 ```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 
 ---
-layout: center
+layout: default
+---
+
+# Types and Interfaces
+
+<br>
+<br>
+<br>
+
+```ts {1|3|3-4|3-9|11-16}
+type BasicColor = string;
+
+interface ColorInterface { 
+  // ! interface is mostly used for objects
+  red: BasicColor;
+  green: BasicColor;
+  blue: number;
+  colorGenerator: (colorName:string)=>string
+}
+
+type ColorByType = {
+  red: BasicColor;
+  green: string;
+  blue: number;
+  colorGenerator: (colorName:string)=>string
+};
+
+```
+
+
+
+---
+
+# Typing Functions
+
+<br>
+<br>
+<br>
+
+```ts {1-2|5|6-8|10-13|all} {maxHeight: '250px'}
+// inline typing
+function add(x: number, y: number): number {
+  return x + y;
+} 
+// or use Interface and types
+// a type
+type minus = (firstNumber:number,secondNumber:number)=> number
+const x :minus = (firstNumber:number,secondNumber:number)=> firstNumber - secondNumber
+// an interface 
+interface IMinus {
+  (firstNumber: string, secondNumber: string): number;
+}
+const y :IMinus = (firstNumber:number,secondNumber:number)=> firstNumber - secondNumber
+
+```
+
+
+
+---
+layout: cover
 class: text-center
+image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+<div>
+Thank you
+</div>

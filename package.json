@@ -1,5 +1,6 @@
 {
   "name": "basic-typescript",
+  "description": "a short intro to Typescript's basics",
   "private": true,
   "scripts": {
     "build": "slidev build",
@@ -9,6 +10,10 @@
   "dependencies": {
     "@slidev/cli": "^0.36.5",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "monaco-themes": "^0.4.2"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.27.0"
   }
 }
