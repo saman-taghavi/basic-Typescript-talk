@@ -96,7 +96,7 @@ see if you can solve this [simple problem](https://github.com/total-typescript/b
 <br>
 <br>
 
-```ts {1-2|4-6|8-10|12-14} 
+```ts {1-2|4-6|8-10|12-14|16-19|21-23|all} {maxHeight: '250px'}
 // * 1. Boolean
 var isDone = false;
 
@@ -112,23 +112,36 @@ color = "red";
 var list = [1, 2, 3];
 var list2 = ["test", "not a test", "array of strings"];
 
+// * 7. Any
+var notSure: any = 4; // ? any type is given explicitly
+notSure = "maybe a string instead";
+notSure = false;
+
+// * 9. Null and Undefined
+let u = undefined;
+let n = null;
 ```
 
 later on we will try to solve more problems from [this repo](https://github.com/total-typescript/beginners-typescript-tutorial), shout out and thanks to [**@mattpocockuk**](https://twitter.com/mattpocockuk)
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+---
+layout: image-left
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# ENUMS
+
+<br>
+<br>
+<br>
+
+```ts 
+type ColorEnum = "red" | "blue" | "green"; // ! one of the ways we can define a type
+
+let ENUM_COLOR: ColorEnum = "blue"; // ! and use it
+```
+
 
 ---
 layout: cover
