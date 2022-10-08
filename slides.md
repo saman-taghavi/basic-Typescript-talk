@@ -143,6 +143,37 @@ let ENUM_COLOR: ColorEnum = "blue"; // ! and use it
 ```
 
 
+
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# Typing Functions
+
+<br>
+<br>
+<br>
+
+```ts {1-2|5|6-8|10-13|all} {maxHeight: '250px'}
+// inline typing
+function add(x: number, y: number): number {
+  return x + y;
+} 
+// or use Interface and types
+// a type
+type minus = (firstNumber:number,secondNumber:number)=> number
+const x :minus = (firstNumber:number,secondNumber:number)=> firstNumber - secondNumber
+// an interface 
+interface IMinus {
+  (firstNumber: string, secondNumber: string): number;
+}
+const y :IMinus = (firstNumber:number,secondNumber:number)=> firstNumber - secondNumber
+
+```
+
+
+
 ---
 layout: cover
 class: text-center
